@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="background">
+        <h1>/Krafts_Connect\</h1>
+        <div class="content">
+            <marquee behavior="alternate"> <span class="marquee">
+                    <h2>Welcome to Krafts_Connect</h2>
+                </span></marquee>
+        </div>
+        <div class="nav">
+            <a class="a active" href="#">Home</a>
+            <a class="b" href="#">About</a>
+            <a class="c" href="#">Gallery</a>\
+            <a class="d" href="#">Contact us</a>
+            <a class="e" href="#">Sign In</a>
+            <a class="f" href="#">Sign Up</a>
+        </div>
+
+        <div class="page">
+            <style>
+                .slideShowContainer {
+                    margin-top: 5px;
+                    width: 500px;
+                    height: 500px;
+                    background-color: rgba(255, 255, 255, 0.575);
+
+                    position: relative;
+                    left: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    transform-origin: left;
+                    transform: translateX(-50%);
+                }
+
+                .slideShowContainer img {
+                    height: inherit;
+                    width: inherit;
+                }
+            </style>
+            <!-- <div class="slideShowContainer">
+                <img id="slideshow" class="1" src="./photos/1.jpg" alt="">
+                <div> <button id="next">Next</button>
+                    <button id="prev">Previous</button></div>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <!-- </div>
+        <script>
+            var maximum = 5
+            var slide = document.getElementById("slideshow")
+            document.getElementById("next").addEventListener("click", function () {
+                if (Number(slide.className) < maximum) {
+                    slide.src = "./photos/" + (Number(slide.className) + 1) + ".jpg"
+                    slide.className = (Number(slide.className) + 1)
+                }
+
+            })
+            document.getElementById("prev").addEventListener("click", function () {
+                if (Number(slide.className) != 0) {
+                    slide.src = "./photos/" + (Number(slide.className) - 1) + ".jpg"
+                    slide.className = (Number(slide.className) - 1)
+                }
+
+        </script>
+    </div>
+    <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                function plusSlides(n) {
+                    showSlides(slideIndex =) -->
+            -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlidesfade">
+                    <div class="numbertext">1 / 10</div>
+                    <img class="basket" src="photos/basket.jpg" style="width: 100%"
+                    >
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 10</div>
+                    <img src="photos/woven.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 10</div>
+                    <img src="photos/5.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 10</div>
+                    <img src="photos/1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="photos/2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="photos/3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 10</div>
+                    <img src="photos/4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 10</div>
+                    <img src="photos/6.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 10</div>
+                    <img src="photos/7.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="photos/header background image.jpg" style="width:100%">
+                </div>
+
+
+
+
+
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+            </div>
+
+            <!-- </script>
+  
+
+-->
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+
+
+
+            <script src="js/jquery-3.3.1.slim.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <div class="about">
+                <p> <b> Krafts_Connect</b> is a social niche that brings to one site various craftsmen and crafts
+                    enthusiasts.
+                    <br>
+                    It is your one-stop to meet indigenous craftsmen and have their location known. <br>
+                    It is believed crafts and arts are a means of communicating our emotions in a tangible form for
+                    the development of the society in other to better our lives.
+                </p>
+                <div>
+                    <p>There are various indigenous crafts in Nigeria and amongst the many, the following categories of
+                        crafts can be
+                        found at Krafts_Connect. <br> They are:
+                        <b> 1. WEAVING: </b><br>
+                        This encompasses different crafts from cloth making to hats, carpet, rugs, chairs, bags, basket,
+                        fans, mats and other items. <br> Weaving can be done with different materials like wool, raffia,
+                        palm
+                        fronds, canes, twine and several others.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b> 2. LEATHER WORKS: </b>
+                        This encompasses all products that can be gotten from leather.
+                        <br>
+                        Leather can be processed to produce bags,footwear,wallets,belts,football,clothes and furniture.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b> 3.BLACKSMITHING:</b>
+                        craftsmen under this category are responsible for the production of tools like
+                        cutlasses to farmers.
+                        <br> We also have kitchen utensils, gates.
+                        <br>
+                        The goldsmiths are not left out as well for they make jewelleries with beautiful stones and
+                        trinkets.
+
+                    </p>
+                </div>
+                <div>
+                    <P> <b>
+                            OTHER CATEGORIES INLCLUDE:
+                            <br>
+                            4. Pottery <br>
+                            5. Carving <br>
+                            6. Dyeing <br>
+                            7. Painting <br>
+                            8. Calligraphy and graphic arts <br>
+                            9. Soap making <br>
+                            10. SMES- Small Medium Enterprises.
+                        </b>
+                    </P>
+                </div>
+                <div>
+                    <p>
+
+                        The picture painted for this site is an interactive web where you
+                        sign up or create an account as either a guest or craftsman.
+
+
+                    </p>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                //   function display() {
+                // var a="Welcome!";
+
+                // alert("a");
+                // }
+
+                $(document).ready(function () {
+                    $('a').click(function () {
+
+                        var selected = $(this);
+                        $('a').removeClass('active');
+                        $(selected).addClass('active');
+                    });
+                    var $a = $('.a'),
+                        $b = $('.b'),
+                        $c = $('.c'),
+                        $d = $('.d'),
+                        $home = $('.home'),
+                        $about = $('.about');
+
+                        $a.click(function(){
+                            $home.fadeIn();
+                            $about.fadeOut();
+                        });
+                        $b.click(function(){
+                            $about.fadeIn();
+                            $home.fadeOut();
+                            
+                        });
+                        
+                });
+            </script>
+
+
+
+
+            </script>
+
+
+</body>
+
+</html>
